@@ -51,23 +51,24 @@ int randomGame2() {
 	else {
 		cout << " You lose, the number was " << secret2 << " ";
 	}
+	return 0;
 }
 int main()
 {
 	int pickGame;
+	do {
+		cout << "Welcome to my fabulous Game\nGame 1 or Game 2 or 3 to Quit" << endl;
+		cin >> pickGame;
 
-	cout << "Welcome to my fabulous Game\nGame 1 or Game 2" << endl;
-	cin >> pickGame;
-
-	if (pickGame == 1)
-	{
-		doorGame();
-	}
-	else if(pickGame == 2) 
-	{
-		randomGame();
-	}
-
+		if (pickGame == 1)
+		{
+			doorGame();
+		}
+		else if (pickGame == 2)
+		{
+			randomGame();
+		}
+	} while (pickGame != 3);
 	system("pause");
 	return 0;
 }
