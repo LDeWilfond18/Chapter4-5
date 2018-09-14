@@ -4,17 +4,30 @@
 using namespace std;
 
 int isocelesTriangle() {
-
-
-
+	int area;
+	int base;
+	int height;
+	int perimeter;
+	cout << "What is your height? ";
+	cin >> height;
+	cout << "What is your base? ";
+	cin >> base;
+	area = base * height / 2;
+	perimeter = 2 * area + base;
+	cout << "Your area is " << area << " Your perimeter is " << perimeter;
 
 	return 0;
 }
 int equilateralTriangle() {
+	int side;
+	double area;
+	double perimeter;
+	cout << "What is the length of your side? ";
+	cin >> side;
+	area = sqrt(3) / 4 * (side * side);
+	perimeter = side + side + side;
 
-
-
-
+	cout << "Your area is " << area << " Your perimeter is " << perimeter;
 
 	return 0;
 }
@@ -27,13 +40,36 @@ int rightTriangle() {
 	cin >> chooseOption;
 
 	if (chooseOption == 1) {
-
+		rightTriangleHypotenuse();
 	}
 	else if (chooseOption == 2) {
-
+		rightTriangleSide();
 	}
 	else
 		cout << "Not an option";
+	return 0;
+}
+int rightTriangleHypotenuse() {
+	double adjacent;
+	double opposite;
+	double c;
+	double result;
+	
+	cout << "What is your adjacent length? ";
+	cin >> adjacent;
+	cout << "What is your Opposite length? ";
+	cin >> opposite;
+
+	c = adjacent * adjacent + opposite * opposite;
+	result = sqrt(c);
+	cout << "The Hypotenuse is " << result;
+
+	return 0;
+}
+int rightTriangleSide() {
+	double side;
+	double hypo;
+
 	return 0;
 }
 int main() {
