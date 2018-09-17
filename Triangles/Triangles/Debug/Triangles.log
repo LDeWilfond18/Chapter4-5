@@ -1,4 +1,2 @@
 ﻿  Source.cpp
-c:\users\ld316338\desktop\c++\chapter4-5\triangles\triangles\source.cpp(43): error C3861: 'rightTriangleHypotenuse': identifier not found
-c:\users\ld316338\desktop\c++\chapter4-5\triangles\triangles\source.cpp(46): error C3861: 'rightTriangleSide': identifier not found
-c:\users\ld316338\desktop\c++\chapter4-5\triangles\triangles\source.cpp(74): error C2059: syntax error: 'return'
+  Triangles.vcxproj -> C:\Users\ld316338\Desktop\C++\Chapter4-5\Triangles\Debug\Triangles.exe

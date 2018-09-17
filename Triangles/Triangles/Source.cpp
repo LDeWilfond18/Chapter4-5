@@ -31,30 +31,12 @@ int equilateralTriangle() {
 
 	return 0;
 }
-int rightTriangle() {
-
-	int chooseOption;
-
-	cout << "What are you solving for? ";
-	cout << "Parameter - 1\nMissing side - 2";
-	cin >> chooseOption;
-
-	if (chooseOption == 1) {
-		rightTriangleHypotenuse();
-	}
-	else if (chooseOption == 2) {
-		rightTriangleSide();
-	}
-	else
-		cout << "Not an option";
-	return 0;
-}
 int rightTriangleHypotenuse() {
 	double adjacent;
 	double opposite;
 	double c;
 	double result;
-	
+
 	cout << "What is your adjacent length? ";
 	cin >> adjacent;
 	cout << "What is your Opposite length? ";
@@ -69,20 +51,55 @@ int rightTriangleHypotenuse() {
 int rightTriangleSide() {
 	double side;
 	double hypo;
+	double missingSide;
+	double result;
 
+	cout << "Enter your hypotenuse ";
+	cin >> hypo;
+	cout << "Enter your other side ";
+	cin >> side;
+
+	missingSide = hypo * hypo + side * side;
+	result = sqrt(missingSide);
+	cout << "Your missing side is " << result;
 	return 0;
 }
+int rightTriangle() {
+
+	int chooseOption;
+
+	cout << "What are you solving for? ";
+	cout << "Find Hypotenuse - 1 \nMissing side - 2 ";
+	cin >> chooseOption;
+
+	if (chooseOption == 1) {
+		rightTriangleHypotenuse();
+	}
+	else if (chooseOption == 2) {
+		rightTriangleSide();
+	}
+	/*else if (chooseOption == 3) {
+		main();
+	}*/
+	else
+		cout << "Not an option ";
+	return 0;
+}
+
+
 int main() {
 
-	int chooseTriangle;
+	double chooseTriangle;
 
 	cout << "Welcome to the triangle calculator" << endl;
 	cout << "What type of triangle are you trying to solve for? " << endl;
-	cout << "1 - Right Triangle\n2 - Isoceles\n3 - Equilateral";
+	do {
+		cout << "\n";
+	cout << "1 - Right Triangle\n2 - Isoceles\n3 - Equilateral ";
 	cin >> chooseTriangle;
 
 
-	do {
+	
 		if (chooseTriangle == 1) {
 			rightTriangle();
 		}
