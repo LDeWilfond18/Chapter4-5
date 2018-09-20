@@ -38,26 +38,33 @@ int randomGame() {
 	}
 	return 0;
 }
-int randomGame2() {
-	int numb1;
-	int secret2;
-	srand(time(NULL));
-	secret2 = rand() % 100 + 1;
-	cout << "Enter a number: ";
-	cin >> numb1;
-	if (numb1 == secret2) {
-		cout << "You Won!";
-	}
-	else {
-		cout << " You lose, the number was " << secret2 << " ";
-	}
-	return 0;
-}
+
+
+	int randomGame2() {
+		int numb1;
+		int secret2;
+		int again;
+		do{
+		srand(time(NULL));
+		secret2 = rand() % 100 + 1;
+		cout << "Enter a number: ";
+		cin >> numb1;
+		if (numb1 == secret2) {
+			cout << "You Won!";
+		}
+		else {
+			cout << " You lose, the number was " << secret2 << " ";
+		}
+		cout << "Would you like to play this game again?\n1- yea\n2- nah";
+		cin >> again;
+		return 0;
+	} while (again != 2);
+} 
 int main()
 {
 	int pickGame;
 	do {
-		cout << "Welcome to my fabulous Game\nGame 1 or Game 2 or 3 to Quit" << endl;
+		cout << "Welcome to my fabulous Game\nGame 1 or Game 2 or Game 3 or 4 to Quit" << endl;
 		cin >> pickGame;
 
 		if (pickGame == 1)
@@ -68,7 +75,11 @@ int main()
 		{
 			randomGame();
 		}
-	} while (pickGame != 3);
+		else if (pickGame == 3)
+		{
+			randomGame2();
+		}
+	} while (pickGame != 4);
 	system("pause");
 	return 0;
 }
